@@ -63,3 +63,7 @@ ul.product-props li {
     width: 150px;
     display: inline-block;
 }
+
+.popup-form input[type=checkbox], .popup-form input[type=submit] {
+    width: auto;
+}
