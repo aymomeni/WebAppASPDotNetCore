@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #line 1 "C:\Users\Ali\source\repos\DutchTreat\DutchTreat\Views\_ViewImports.cshtml"
-using DutchTreat.controllers;
+using DutchTreat.Controllers;
 
 #line default
 #line hidden
@@ -23,8 +23,13 @@ using DutchTreat.ViewModels;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Ali\source\repos\DutchTreat\DutchTreat\Views\_ViewImports.cshtml"
+using DutchTreat.Data.Entities;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b29ad39d0bdef2a3dc79f9a5c0f9602135278142", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aa2ebd963ff8b9eac3f6a0b9f3f5f75ec060c922", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0ef2f30b312052400385b21cb98e798bb411a0c9", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
