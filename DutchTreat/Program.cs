@@ -14,11 +14,21 @@ namespace DutchTreat
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            BuildWebHost(args).Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args) // sets up a default configuration file (later used for the db)
+                .ConfigureAppConfiguration(SetupConfiguration)
+            .UseStartup<Startup>().Build();
+
+        private static void SetupConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
+        {
+            // removing the default configuration options
+            builder.Sources.Clear();
+
+            builder.AddJsonFile("config.json", false, true)
+                .AddEnvironmentVariables();
+        }
     }
 }
