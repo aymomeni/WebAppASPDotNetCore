@@ -4,5 +4,10 @@
   },
   "ConnectionStrings": {
     "DutchConnectionString": "server=(localdb)\\v11.0;Database=DutchTreatDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information"
+    }
   }
 }
