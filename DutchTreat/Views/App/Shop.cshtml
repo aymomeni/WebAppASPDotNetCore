@@ -5,16 +5,18 @@
 <div class="row">
     @foreach (var p in Model)
     {
-        <div class="col-md-3">
-            <img src="~/img/VanGogh.jpg.jpg" style="width: 250px;" />
-            <h3>Mug</h3>
+    <div class="col-md-3">
+        <div class="border bg-light rounded p-1">
+            <img src="~/img/@(p.ArtId).jpg" class="img-fuild" />
+            <h3>@p.Category  - @p.Size</h3>
             <ul class="product-props">
-                <li>Price: $9.99</li>
-                <li>Artist: Van Gogh</li>
-                <li>Title:</li>
-                <li>Description: Self-portrait</li>
+                <li>Price: @p.Price</li>
+                <li>Artist: @p.Artist</li>
+                <li>Title: @p.Title</li>
+                <li>Description: @p.ArtDescription</li>
             </ul>
             <button id="buyButton" class="btn btn-success">Buy</button>
         </div>
+    </div>
     }
 </div>
