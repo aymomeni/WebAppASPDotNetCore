@@ -24,7 +24,7 @@ namespace DutchTreat.Controllers
         public IActionResult Index()
         {
             //throw new InvalidOperationException("Bad things happened");
-            var results = _repository.GetAllProducts();
+            //var results = _repository.GetAllProducts();
             return View();
         }
 

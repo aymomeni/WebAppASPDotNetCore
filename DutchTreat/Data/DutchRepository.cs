@@ -16,15 +16,24 @@ namespace DutchTreat.Data
         public DutchRepository(DutchContext ctx, ILogger<DutchRepository> logger)
         {
             _ctx = ctx;
+            _logger = logger;
         }
 
         public IEnumerable<Product> GetAllProducts()
         {
-            _logger.LogInformation("GetAllProduct");
-            return _ctx.
-                Products
-                .OrderBy(p => p.Title)
-                .ToList();
+            try {
+                _logger.LogInformation("GetAllProduct");
+
+                return _ctx.
+                    Products
+                    .OrderBy(p => p.Title)
+                    .ToList();
+
+            } catch(Exception ex)
+            {
+                _logger.LogError($"Failed to get all products: {ex}");
+                return null;
+            }
         }
 
         public IEnumerable<Product> GetProductsByCategory(string category)
