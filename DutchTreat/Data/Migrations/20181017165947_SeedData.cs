@@ -12,7 +12,7 @@ namespace DutchTreat.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "OrderDate",
-                value: new DateTime(2018, 10, 14, 17, 39, 14, 116, DateTimeKind.Utc));
+                value: new DateTime(2018, 10, 17, 16, 59, 47, 423, DateTimeKind.Utc));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -22,7 +22,7 @@ namespace DutchTreat.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "OrderDate",
-                value: new DateTime(2018, 10, 14, 17, 39, 0, 676, DateTimeKind.Utc));
+                value: new DateTime(2018, 10, 14, 17, 39, 14, 116, DateTimeKind.Utc));
         }
     }
 }

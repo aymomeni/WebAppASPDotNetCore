@@ -31,15 +31,17 @@ namespace DutchTreat
                 // must pass a connection string into here (Configuration)
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
-            services.AddTransient<IMailService, NullMailService>();
-            // Support for real mail service
 
             services.AddTransient<DutchSeeder>();
+
+            services.AddTransient<IMailService, NullMailService>();
+            // Support for real mail service
 
             // Add IDutchRepository as a service that people can use as the implementation DutchRepository
             services.AddScoped<IDutchRepository, DutchRepository>();
             
-            services.AddMvc();
+            services.AddMvc()
+                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1); // magic that deals with the response type
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

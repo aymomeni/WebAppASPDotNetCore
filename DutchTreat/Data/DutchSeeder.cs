@@ -35,23 +35,26 @@ namespace DutchTreat.Data
                 var products = JsonConvert.DeserializeObject<IEnumerable<Product>>(json);
                 _ctx.Products.AddRange(products);
 
-                var order = _ctx.Orders.Where(o => o.Id == 1).FirstOrDefault();
+                _ctx.SaveChanges();
+            }
 
-                if(order != null)
+            if (!_ctx.Orders.Any())
+            {
+                var order = _ctx.Orders.Where(o => o.Id == 1).FirstOrDefault();
+                var product = _ctx.Products.First();
+
+                if (order != null)
                 {
                     order.Items = new List<OrderItem>()
                     {
                         new OrderItem()
                         {
-                            Product = products.First(),
+                            Product = product,
                             Quantity = 5,
-                            UnitPrice = products.First().Price
+                            UnitPrice = product.Price
                         }
                     };
                 }
-
-
-                _ctx.SaveChanges();
             }
         }
     }
