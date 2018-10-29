@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DutchTreat.Data;
 using DutchTreat.Services;
 using Microsoft.AspNetCore.Builder;
@@ -32,15 +33,17 @@ namespace DutchTreat
                 cfg.UseSqlServer(_config.GetConnectionString("DutchConnectionString"));
             });
 
+            services.AddAutoMapper();
+
+            services.AddTransient<IMailService, NullMailService>(); // Support for real mail service
             services.AddTransient<DutchSeeder>();
 
-            services.AddTransient<IMailService, NullMailService>();
-            // Support for real mail service
 
             // Add IDutchRepository as a service that people can use as the implementation DutchRepository
             services.AddScoped<IDutchRepository, DutchRepository>();
             
             services.AddMvc()
+                .AddJsonOptions(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore) // allows self referencing loop in orders
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1); // magic that deals with the response type
         }
 
