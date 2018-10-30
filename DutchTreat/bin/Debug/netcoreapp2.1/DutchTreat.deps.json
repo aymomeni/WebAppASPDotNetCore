@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "d719b53dc2a6201bfc16abb5548c4480b12e0fe0"
+    "signature": "1214239a66caeac37c15378965ca5301f16e697f"
   },
   "compilationOptions": {
     "defines": [
@@ -25,7 +25,7 @@
       "DutchTreat/1.0.0": {
         "dependencies": {
           "AutoMapper": "7.0.1",
-          "CleanCodeLabs.AutoMapper.Extensions.Autofac.DependencyInjection": "1.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -36,21 +36,6 @@
         },
         "compile": {
           "DutchTreat.dll": {}
-        }
-      },
-      "Autofac/4.8.1": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3",
-          "System.ComponentModel": "4.0.1"
-        },
-        "runtime": {
-          "lib/netstandard1.1/Autofac.dll": {
-            "assemblyVersion": "4.8.1.0",
-            "fileVersion": "4.8.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard1.1/Autofac.dll": {}
         }
       },
       "AutoMapper/7.0.1": {
@@ -67,34 +52,19 @@
           "lib/netcoreapp2.0/AutoMapper.dll": {}
         }
       },
-      "AutoMapper.Collection/4.0.0": {
-        "dependencies": {
-          "AutoMapper": "7.0.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/AutoMapper.Collection.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/AutoMapper.Collection.dll": {}
-        }
-      },
-      "CleanCodeLabs.AutoMapper.Extensions.Autofac.DependencyInjection/1.0.0": {
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
         "dependencies": {
           "AutoMapper": "7.0.1",
-          "AutoMapper.Collection": "4.0.0",
-          "Autofac": "4.8.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
         },
         "runtime": {
-          "lib/netstandard2.0/AutoMapper.Extensions.Autofac.DependencyInjection.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "5.0.1.0"
           }
         },
         "compile": {
-          "lib/netstandard2.0/AutoMapper.Extensions.Autofac.DependencyInjection.dll": {}
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -284,11 +254,6 @@
         },
         "compile": {
           "lib/netstandard2.0/OdeToCode.UseNodeModules.dll": {}
-        }
-      },
-      "System.ComponentModel/4.0.1": {
-        "dependencies": {
-          "System.Runtime": "4.3.0"
         }
       },
       "System.ValueTuple/4.5.0": {},
@@ -3232,13 +3197,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Autofac/4.8.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-GYRLxd2wCzhvee2u1vs3AbUbF4CHDWfD7BCNjD3Vxb4wxQz3HC8bPm9Sj9uOT0gE8a6PC2fx1zufmhLgxK+cZg==",
-      "path": "autofac/4.8.1",
-      "hashPath": "autofac.4.8.1.nupkg.sha512"
-    },
     "AutoMapper/7.0.1": {
       "type": "package",
       "serviceable": true,
@@ -3246,19 +3204,12 @@
       "path": "automapper/7.0.1",
       "hashPath": "automapper.7.0.1.nupkg.sha512"
     },
-    "AutoMapper.Collection/4.0.0": {
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YqRXaCet18I/S+FkcRpchqYHaPStG0ubxb4fii4o9v9B3zneRObLob8cd9lnE1qjBYI5Yao6YZy5IoKN9Lh4Jw==",
-      "path": "automapper.collection/4.0.0",
-      "hashPath": "automapper.collection.4.0.0.nupkg.sha512"
-    },
-    "CleanCodeLabs.AutoMapper.Extensions.Autofac.DependencyInjection/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ld0RgRzp13aERfM/MJYXLRaGmorvoGupWEyLGnW6LrU71eghRwY79sDABApv3AplLclKgpDrVaIT+6bJlmQuBA==",
-      "path": "cleancodelabs.automapper.extensions.autofac.dependencyinjection/1.0.0",
-      "hashPath": "cleancodelabs.automapper.extensions.autofac.dependencyinjection.1.0.0.nupkg.sha512"
+      "sha512": "sha512-FsPcuVkaAj232P6yrSxnQybBnwawvsg3C65l+BDShGaU9jfANGjMY2evNlQ8RAEezrutpeQT9LFWQJ+sXhaHPw==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
@@ -3322,13 +3273,6 @@
       "sha512": "sha512-mE838R7RdMaQ3csLrWMCeeG8UtL5jdfEFlYjRTit6EfOTB17sLoV/tmNdAXl59ht0Rcb+9m3t9rqyC7gVEz21A==",
       "path": "odetocode.usenodemodules/1.0.6",
       "hashPath": "odetocode.usenodemodules.1.0.6.nupkg.sha512"
-    },
-    "System.ComponentModel/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-oBZFnm7seFiVfugsIyOvQCWobNZs7FzqDV/B7tx20Ep/l3UUFCPDkdTnCNaJZTU27zjeODmy2C/cP60u3D4c9w==",
-      "path": "system.componentmodel/4.0.1",
-      "hashPath": "system.componentmodel.4.0.1.nupkg.sha512"
     },
     "System.ValueTuple/4.5.0": {
       "type": "package",
