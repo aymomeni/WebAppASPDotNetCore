@@ -30,15 +30,15 @@ namespace DutchTreat.Data
             _ctx.Database.EnsureCreated();
 
             // Seed the Main User
-            StoreUser user = await _userManager.FindByEmailAsync("aymomeni@gmail.com");
+            StoreUser user = await _userManager.FindByEmailAsync("anderson@gmail.com");
             if (user == null)
             {
                 user = new StoreUser()
                 {
                     LastName = "momeni",
                     FirstName = "ali",
-                    Email = "aymomeni@gmail.com",
-                    UserName = "aymomeni@gmail.com"
+                    Email = "anderson@gmail.com",
+                    UserName = "anderson@gmail.com"
                 };
 
                 var result = await _userManager.CreateAsync(user, "P@ssw0rd!");

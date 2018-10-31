@@ -38,7 +38,7 @@ namespace DutchTreat.Migrations
                     b.ToTable("Orders");
 
                     b.HasData(
-                        new { Id = 1, OrderDate = new DateTime(2018, 10, 30, 22, 43, 49, 746, DateTimeKind.Utc), OrderNumber = "12345" }
+                        new { Id = 1, OrderDate = new DateTime(2018, 10, 31, 17, 58, 24, 972, DateTimeKind.Utc), OrderNumber = "12345" }
                     );
                 });
 
