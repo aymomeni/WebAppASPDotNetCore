@@ -63,6 +63,8 @@ namespace DutchTreat.Data
                 {
                     order = new Order();
                     order.User = user;
+                    order.User.Id = user.Id;
+                    //order.Id = 123456; // magic number
                     order.Items = new List<OrderItem>()
                     {
                         new OrderItem()

@@ -4,8 +4,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DutchTreat.Data
 {
@@ -43,6 +41,7 @@ namespace DutchTreat.Data
 
         public IEnumerable<Order> GetAllOrdersByUser(string username, bool includeItems)
         {
+            username = "anderson@gmail.com";
             if (includeItems)
             {
                 return _ctx.Orders
@@ -63,8 +62,7 @@ namespace DutchTreat.Data
             try {
                 _logger.LogInformation("GetAllProduct");
 
-                return _ctx.
-                    Products
+                return _ctx.Products
                     .OrderBy(p => p.Title)
                     .ToList();
 
