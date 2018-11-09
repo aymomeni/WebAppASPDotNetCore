@@ -41,7 +41,7 @@ namespace DutchTreat.Data
 
         public IEnumerable<Order> GetAllOrdersByUser(string username, bool includeItems)
         {
-            username = "anderson@gmail.com";
+
             if (includeItems)
             {
                 return _ctx.Orders
