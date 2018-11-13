@@ -73,9 +73,10 @@ namespace DutchTreat.Controllers
             //              select p;
             //return View(results.ToList());
 
-            var results = _repository.GetAllProducts();
+            //var results = _repository.GetAllProducts();
 
-            return View(results.ToList());
+            //return View(results.ToList());
+            return View(); // angular component is used instead of razor views
         }
     }
 }
