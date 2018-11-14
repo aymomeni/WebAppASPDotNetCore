@@ -180,7 +180,7 @@ var DataService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <ul>\r\n        <li *ngFor=\"let p of products\">{{ p.title }} : {{ p.price | currency:\"USD\":true }}</li>\r\n    </ul>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"product-info col-md-4\" *ngFor=\"let p of products\">\r\n        <img src=\"/img/{{ p.artId }}.jpg\" class=\"img-fluid\" [alt]=\"p.title\" />\r\n        <h3>Mug</h3>\r\n        <ul class=\"product-props\">\r\n            <li><strong>Price</strong>: {{ p.price | currency:\"USD\":true }}</li>\r\n            <li><strong>Artist</strong>: {{ p.artist }}</li>\r\n            <li><strong>Title</strong>: {{ p.title }}</li>\r\n            <li><strong>Description</strong>: {{ p.artDescription }}</li>\r\n        </ul>\r\n        <button id=\"buyButton\">Buy</button>\r\n    </div>\r\n\r\n</div>"
 
 /***/ }),
 

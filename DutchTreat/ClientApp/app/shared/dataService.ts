@@ -1,7 +1,9 @@
 ﻿import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
+import { Product } from './product';
+
 
 @Injectable()
 export class DataService {
@@ -12,10 +14,10 @@ export class DataService {
 
     loadProducts(): Observable<boolean> {
         return this.http.get("/api/products")
-            .map((data: any[]) => {
+            .pipe(map((data: Product[]) => {
                 this.products = data;
                 return true;
-            });
+            }));
             
     }
 }
