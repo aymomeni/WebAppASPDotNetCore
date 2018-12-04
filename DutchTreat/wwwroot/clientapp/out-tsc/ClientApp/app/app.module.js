@@ -9,7 +9,15 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProductList } from './shop/productList.component';
+import { Shop } from "./shop/shop.component";
+import { Checkout } from "./checkout/checkout.component";
+import { Cart } from './shop/cart.component';
 import { DataService } from './shared/dataService';
+import { RouterModule } from "@angular/router";
+var routes = [
+    { path: "", component: Shop },
+    { path: "/checkout", component: Checkout }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -17,11 +25,16 @@ var AppModule = /** @class */ (function () {
         NgModule({
             declarations: [
                 AppComponent,
-                ProductList
+                ProductList,
+                Cart
             ],
             imports: [
                 BrowserModule,
-                HttpClientModule
+                HttpClientModule,
+                RouterModule.forRoot(routes, {
+                    useHash: true,
+                    enableTracing: true // for debugging of the routes
+                })
             ],
             providers: [
                 DataService // allows for data to be injected
