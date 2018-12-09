@@ -6,5 +6,5 @@ if (environment.production) {
     enableProdMode();
 }
 platformBrowserDynamic().bootstrapModule(AppModule)
-    .catch(function (err) { return console.error(err); });
+    .catch(function (err) { return console.log(err); });
 //# sourceMappingURL=main.js.map

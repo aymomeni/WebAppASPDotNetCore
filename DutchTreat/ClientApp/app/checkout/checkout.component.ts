@@ -12,14 +12,14 @@ export class Checkout {
     constructor(public data: DataService, public router: Router) {
     }
 
-    //errorMessage: string = "";
+    errorMessage: string = "";
 
-    onCheckout() {
-        //this.data.checkout()
-        //    .subscribe(success => {
-        //        if (success) {
-        //            this.router.navigate(["/"]);
-        //        }
-        //    }, err => this.errorMessage = "Failed to save order");
+    onCheckout() {6
+        this.data.checkout()
+            .subscribe(success => {
+                if (success) {
+                    this.router.navigate(["/"]);
+                }
+            }, err => this.errorMessage = "Failed to save order");
     }
 }

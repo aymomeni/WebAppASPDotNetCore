@@ -13,10 +13,13 @@ import { Shop } from "./shop/shop.component";
 import { Checkout } from "./checkout/checkout.component";
 import { Cart } from './shop/cart.component';
 import { DataService } from './shared/dataService';
+import { Login } from "./login/login.component";
 import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 var routes = [
     { path: "", component: Shop },
-    { path: "/checkout", component: Checkout }
+    { path: "checkout", component: Checkout },
+    { path: "login", component: Login }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -26,14 +29,18 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 AppComponent,
                 ProductList,
-                Cart
+                Shop,
+                Checkout,
+                Cart,
+                Login
             ],
             imports: [
                 BrowserModule,
                 HttpClientModule,
+                FormsModule,
                 RouterModule.forRoot(routes, {
                     useHash: true,
-                    enableTracing: true // for debugging of the routes
+                    enableTracing: false // for debugging of the routes
                 })
             ],
             providers: [
