@@ -4,13 +4,13 @@
 #### Topics
 ##### Model Binding
 ##### Razor Pages
-##### Using Validation
-##### Utilizing Bootstrap
+##### Model Validation
+##### Bootstrap
 ##### Building/Seeding Database with Entity Framework Core
 ##### APS.Net Core Identity
 ###### Authorizing Actions
 ###### Storing Identities in the DB
 ###### Using Identity in the API
 ##### Angular
-###### Adding routing to the Project
-###### Using the Angular CLI
+###### Routing
+###### CLI
