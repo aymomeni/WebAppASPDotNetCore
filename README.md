@@ -1,7 +1,7 @@
 # WebAppASPDotNetCore
 #### Building a Web App with ASP.NET Core, MVC, Entity Framework Core, Bootstrap, and Angular - with Shawn Wildermuth
 
-#### Interesting Topics
+#### Topics
 ##### Model Binding
 ##### Razor Pages
 ##### Using Validation
